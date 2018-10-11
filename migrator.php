@@ -33,8 +33,6 @@ class MYSQLTOMONGO {
             $aprop        = strtolower($line);
             $this->$aprop = $prop;
         }
-        var_dump($this->getconfig());
-        die();
         $dsn = 'mysql:host=' . $this->mysql_host . ';dbname=' . $this->mysql_schema;
         $options = array(
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
