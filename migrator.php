@@ -61,7 +61,7 @@ class MYSQLTOMONGO {
         
         /**
         
-        The solution I used:
+        The solution is what I used:
         in /etc/mysql/my.cnf add below [mysqld]
         
         secure-file-priv = ""
