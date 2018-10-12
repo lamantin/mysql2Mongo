@@ -11,7 +11,7 @@ $config = parse_ini_file('mig.ini');
 $migrator = new MYSQLTOMONGO($config);
 
 $migrator->worker();
-echo PHP_EOL.'all process are finished'.PHP_EOL;
+echo PHP_EOL.'all processes are finished'.PHP_EOL;
 exit(0);
 class MYSQLTOMONGO {
     
