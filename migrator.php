@@ -3,7 +3,7 @@ set_time_limit(0);
 
 if (0 == !posix_getuid()) {
     echo 'You need to use this script as root!';
-  //   exit(0);
+    exit(0);
 }
 
 $config = parse_ini_file('mig.ini');
@@ -59,14 +59,13 @@ class MYSQLTOMONGO {
     
     public function enable_mysql_file_export() {
         
-        /**
-        
-        The solution is what I used:
-        in /etc/mysql/my.cnf add below [mysqld]
-        
-        secure-file-priv = ""
-        
-        */
+       /**
+        *
+        * in /etc/mysql/my.cnf add below [mysqld]
+        * 
+        * secure-file-priv = ""
+        *
+        **/
         
         $data = shell_exec('grep "secure-file-priv"  /etc/mysql/my.cnf');
         if (strlen($data > 1)) {
